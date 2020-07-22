@@ -45,7 +45,7 @@ pipeline{
 
             stage("Test"){
                 steps{
-                 echo 'testing'
+                 echo 'COVERALLS_REPO_TOKEN=FGUCgJjKny6IGgK1i8LLXHFGop7GZklhb bundle exec coveralls push'
                 }
                 
                 

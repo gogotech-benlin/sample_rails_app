@@ -24,6 +24,12 @@ spec:
             checkout scm
             }
         }
+
+        stage("requirement"){
+            steps{
+                sh 'gem install bundler'
+            }
+        }
             stage("build"){
                 steps{
                   sh 'bundle install'

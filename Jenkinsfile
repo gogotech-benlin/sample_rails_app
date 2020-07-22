@@ -19,12 +19,10 @@ pipeline{
   }
     stages{
         stage("check version"){
-            container("ruby"){
              steps{
-                sh 'ruby --version'
-            }
-
-
+                 container("ruby"){
+                  sh 'ruby --version'
+                 }
             }
         }
  //        stage("Clone"){

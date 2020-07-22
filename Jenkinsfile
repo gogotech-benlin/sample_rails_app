@@ -19,15 +19,19 @@ pipeline{
   }
     stages{
         stage("check version"){
-            steps{
+            container("ruby"){
+             steps{
                 sh 'ruby --version'
             }
-        }
-        stage("Clone"){
-            steps{
-            checkout scm
+
+
             }
         }
+ //        stage("Clone"){
+ //            steps{
+ //            checkout scm
+ //            }
+ //        }
 
         stage("requirement"){
             steps{

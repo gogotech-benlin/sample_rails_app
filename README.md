@@ -1,4 +1,6 @@
+[![Coverage Status](https://coveralls.io/repos/github/gogotech-benlin/sample_rails_app/badge.svg?branch=master)](https://coveralls.io/github/gogotech-benlin/sample_rails_app?branch=master)
 # Ruby on Rails Tutorial sample application
+
 
 This is a fork of the [*Ruby on Rails Tutorial*](http://www.railstutorial.org/) application by Michael Hartl. 
 We created this project to help you try RubyMine features.

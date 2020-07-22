@@ -36,20 +36,13 @@ pipeline{
                  container("ruby"){
 
                 sh 'gem install bundler'
+                sh 'bundler update --bundler'
+                  sh 'bundle install'
+                  sh 'bundle exec rake db:migrate'
+ 
                 
             }
         }}
-            stage("build"){
-
-                steps{
-                          container("ruby"){
-
-                  sh 'bundle install'
-                  sh 'bundle exec rake db:migrate'
-                  
-                }
-                
-            }}
 
             stage("Test"){
                 steps{

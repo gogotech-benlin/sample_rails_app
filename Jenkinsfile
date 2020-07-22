@@ -6,16 +6,23 @@ pipeline{
     }
     stages{
         stage("Clone"){
+            steps{
             checkout scm
+            }
         }
             stage("build"){
-                sh 'bundle install'
-                sh 'bundle exec rake db:migrate'
+                steps{
+                  sh 'bundle install'
+                  sh 'bundle exec rake db:migrate'
+                }
+                
             }
 
             stage("Test"){
-                echo 'testing'
-
+                steps{
+                 echo 'testing'
+                }
+                
                 
 
             }

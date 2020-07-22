@@ -19,6 +19,11 @@ spec:
     }
   }
     stages{
+        stage("check version"){
+            steps{
+                sh 'ruby --version'
+            }
+        }
         stage("Clone"){
             steps{
             checkout scm

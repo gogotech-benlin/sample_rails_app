@@ -1,21 +1,20 @@
 pipeline{
-
   agent {
     kubernetes {
-      yaml """
-apiVersion: v1
-kind: Pod
-metadata:
-  labels:
-    some-label: some-label-value
-spec:
-  containers:
-  - name: ruby
-    image: ruby:2.5.1
-    command:
-    - cat
-    tty: true
-"""
+              yaml """
+        apiVersion: v1
+        kind: Pod
+        metadata:
+          labels:
+            some-label: some-label-value
+        spec:
+          containers:
+          - name: ruby
+            image: ruby:2.5.1
+            command:
+            - cat
+            tty: true
+        """
     }
   }
     stages{

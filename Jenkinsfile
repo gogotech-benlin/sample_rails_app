@@ -33,16 +33,23 @@ pipeline{
 
         stage("requirement"){
             steps{
+                 container("ruby"){
+
                 sh 'gem install bundler'
-            }
-        }
-            stage("build"){
-                steps{
-                  sh 'bundle install'
-                  sh 'bundle exec rake db:migrate'
-                }
                 
             }
+        }}
+            stage("build"){
+
+                steps{
+                          container("ruby"){
+
+                  sh 'bundle install'
+                  sh 'bundle exec rake db:migrate'
+                  
+                }
+                
+            }}
 
             stage("Test"){
                 steps{

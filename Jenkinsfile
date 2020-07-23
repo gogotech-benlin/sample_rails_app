@@ -32,6 +32,7 @@ pipeline{
                     container("ruby"){
                     sh 'pwd'
                     sh 'ls'
+                    sh 'bundle exec rspec spec'
                     sh 'COVERALLS_REPO_TOKEN=FGUCgJjKny6IGgK1i8LLXHFGop7GZklhb bundle exec coveralls push'
 
 

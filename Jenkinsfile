@@ -29,7 +29,11 @@ pipeline{
 
             stage("Test"){
                 steps{
-                 sh 'COVERALLS_REPO_TOKEN=FGUCgJjKny6IGgK1i8LLXHFGop7GZklhb bundle exec coveralls push'
+                    container("ruby"){
+    sh 'COVERALLS_REPO_TOKEN=FGUCgJjKny6IGgK1i8LLXHFGop7GZklhb bundle exec coveralls push'
+
+
+                    }
                 }
                 
                 

@@ -25,23 +25,7 @@ pipeline{
                  }
             }
         }
- //        stage("Clone"){
- //            steps{
- //            checkout scm
- //            }
- //        }
 
-        stage("requirement"){
-            steps{
-                 container("ruby"){
-
-                sh 'gem install bundler'
-                  sh 'bundle install'
-                  sh 'bundle exec rake db:migrate'
- 
-                
-            }
-        }}
 
             stage("Test"){
                 steps{

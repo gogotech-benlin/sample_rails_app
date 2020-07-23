@@ -10,7 +10,7 @@ pipeline{
         spec:
           containers:
           - name: ruby
-            image: ruby:2.5.1
+            image: gogotechhk/sample_rails_app 
             command:
             - cat
             tty: true

@@ -34,7 +34,6 @@ pipeline{
         stage("check version"){
              steps{
                  container("ruby"){
-                  setBuildStatus("Build starts", "PENDING")
                   sh 'ruby --version'
 
                  }
@@ -45,6 +44,8 @@ pipeline{
             steps{
                 container("ruby"){
                     checkout scm
+                    setBuildStatus("Build starts", "PENDING")
+
                 }
             }
         }

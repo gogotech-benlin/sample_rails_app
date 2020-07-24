@@ -55,7 +55,7 @@ pipeline{
                     container("ruby"){
                     sh 'pwd'
                     sh 'ls'
-                    sh 'bundle exec rspec spec'
+                    //sh 'bundle exec rspec spec'
 
 
                     }

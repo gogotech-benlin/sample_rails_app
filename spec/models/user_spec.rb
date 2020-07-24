@@ -9,7 +9,7 @@ RSpec.describe User do
   end
 
   it "should be valid" do
-    expect(@user.valid?).to eq(true)
+    expect(@user.valid?).to eq(false)
   end
 
   it "name should be present" do

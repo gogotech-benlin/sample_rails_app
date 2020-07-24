@@ -32,6 +32,7 @@ pipeline{
                  container("ruby"){
                   setBuildStatus("Build starts", "PENDING")
                   sh 'ruby --version'
+
                  }
             }
         }

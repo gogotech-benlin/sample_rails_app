@@ -44,7 +44,6 @@ pipeline{
             steps{
                 container("ruby"){
                     checkout scm
-                    setBuildStatus("Build starts", "PENDING")
 
                 }
             }

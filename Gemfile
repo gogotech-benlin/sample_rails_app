@@ -20,6 +20,7 @@ gem 'factory_bot',                '6.1.0'
 gem 'factory_bot_rails',          '6.1.0'
 
 gem 'coveralls', require: false
+
 group :development, :test do
   # gem 'debase'
   # gem 'ruby-debug-ide'

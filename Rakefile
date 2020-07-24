@@ -3,4 +3,9 @@
 
 require_relative 'config/application'
 
+require 'coveralls/rake/task'
+Coveralls::RakeTask.new
+task :test_with_coveralls => ["test", "coveralls:push"]
 Rails.application.load_tasks
+
+

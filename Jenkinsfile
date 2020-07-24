@@ -26,6 +26,9 @@ pipeline{
         """
     }
   }
+  options {
+      skipDefaultCheckout(true)
+  }
     stages{
         stage("check version"){
              steps{
@@ -36,7 +39,14 @@ pipeline{
                  }
             }
         }
-
+        stage("checkout scm")
+        {
+            steps{
+                container("ruby"){
+                    checkout scm
+                }
+            }
+        }
 
             stage("Test"){
                 steps{

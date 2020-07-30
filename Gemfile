@@ -20,6 +20,8 @@ gem 'factory_bot',                '6.1.0'
 gem 'factory_bot_rails',          '6.1.0'
 
 gem 'coveralls', require: false
+gem 'codecov', require: false, group: 'test'
+
 
 group :development, :test do
   # gem 'debase'

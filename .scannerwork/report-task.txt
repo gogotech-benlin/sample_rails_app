@@ -1,0 +1,6 @@
+projectKey=sample_rails_app
+serverUrl=https://sonarqube.gogox.dev
+serverVersion=8.2.0.32929
+dashboardUrl=https://sonarqube.gogox.dev/dashboard?id=sample_rails_app
+ceTaskId=AXOUP36ZzTwYny77thZw
+ceTaskUrl=https://sonarqube.gogox.dev/api/ce/task?id=AXOUP36ZzTwYny77thZw

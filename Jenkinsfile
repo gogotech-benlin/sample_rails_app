@@ -55,7 +55,7 @@ pipeline{
                     container("ruby"){
                     sh 'pwd'
                     sh 'ls'
-                    sh 'bundle exec rspec spec'
+                    sh 'CODECOV_TOKEN=883a0ea2-d383-499e-ab19-16fe9eb9411fi bundle exec rspec spec'
 
 
 

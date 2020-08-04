@@ -17,9 +17,6 @@ pipeline{
         """
     }
   }
-  tools {
-      sonarkube 'sonarkube-scanner'
-  }
     stages{
         stage("check version"){
              steps{
@@ -45,10 +42,10 @@ pipeline{
                 steps{
                     container("ruby"){
 
-                         withSonarQubeEnv('sonarcloud') { // If you have configured more than one global server connection, you can specify its name
-                              sh "${scannerHome}/bin/sonar-scanner"
-                          }
-        
+                 withSonarQubeEnv('sonarcloud') { // If you have configured more than one global server connection, you can specify its name
+                      sh "${scannerHome}/bin/sonar-scanner"
+                  }
+
                     }
 
                 }

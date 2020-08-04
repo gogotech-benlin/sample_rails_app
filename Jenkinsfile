@@ -30,7 +30,7 @@ pipeline{
             stage("Test"){
                 steps{
                     container("ruby"){
-                    sh 'undle exec coveralls push'
+                    sh 'bundle exec coveralls push'
                     }
                 }
                 

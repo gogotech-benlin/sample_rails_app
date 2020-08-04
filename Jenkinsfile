@@ -30,9 +30,7 @@ pipeline{
             stage("Test"){
                 steps{
                     container("ruby"){
-    sh 'COVERALLS_REPO_TOKEN=FGUCgJjKny6IGgK1i8LLXHFGop7GZklhb bundle exec coveralls push'
-
-
+                    sh 'undle exec coveralls push'
                     }
                 }
                 

@@ -35,7 +35,7 @@ pipeline{
             stage("Test"){
                 steps{
                     container("ruby"){
-                    sh 'bundle exec coveralls push'
+                    sh 'bundle exec rspec spec'
 
                     }
                 }

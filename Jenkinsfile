@@ -52,7 +52,10 @@ pipeline{
                                scannerHome = tool 'sonarqube-scanner'
                           }
                           withSonarQubeEnv('sonarcloud') { // If you have configured more than one global server connection, you can specify its name
-                              sh "${scannerHome}/bin/sonar-scanner"
+                              sh "${scannerHome}/bin/sonar-scanner" +
+                                 "-Dsonar.pullrequest.branch=${env.BRANCH_NAME} " +
+                                 "-Dsonar.pullrequest.key=${env.CHANGE_ID} " 
+                                 "-Dsonar.pullrequest.provider=github "
                           }
                     }
                 }

@@ -49,6 +49,7 @@ pipeline{
                          withSonarQubeEnv('sonarcloud') { // If you have configured more than one global server connection, you can specify its name
                               sh "sonar-scanner"
                           }
+
         
                     }
 

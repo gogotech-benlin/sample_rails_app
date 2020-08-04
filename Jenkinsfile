@@ -31,11 +31,19 @@ pipeline{
                 steps{
                     container("ruby"){
                     sh 'bundle exec coveralls push'
+
                     }
                 }
                 
                 
 
             }
+            stage("sonarqube"){
+                 withSonarQubeEnv('sonarcloud') { // If you have configured more than one global server connection, you can specify its name
+                      sh "${scannerHome}/bin/sonar-scanner"
+                  }
+            }
+
+
     }
 }

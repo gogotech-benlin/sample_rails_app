@@ -14,6 +14,11 @@ pipeline{
             command:
             - cat
             tty: true
+          - name: java
+            image: maven
+            command: 
+            - cat
+            tty: true
         """
     }
   }
@@ -40,16 +45,16 @@ pipeline{
             }
             stage("sonarqube"){
 
-           agent {     docker   'maven:3-alpine'   }
-
 
                 steps{
+                    container("java"){
                           script {
                                scannerHome = tool 'sonarqube-scanner'
                           }
                           withSonarQubeEnv('sonarcloud') { // If you have configured more than one global server connection, you can specify its name
                               sh "${scannerHome}/bin/sonar-scanner"
                           }
+                    }
                 }
             }
 

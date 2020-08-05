@@ -24,7 +24,7 @@ pipeline{
             args: ['\$(JENKINS_SECRET)', '\$(JENKINS_NAME)']
             resources:
               requests:
-                momory: "1024Mi"
+                memory: "1024Mi"
                 cpu: "500m"
        """
     }

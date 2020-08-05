@@ -19,17 +19,7 @@ pipeline{
             command: 
             - cat
             tty: true
-          - name: jnlp
-            image: 'jenkins/jnlp-slave:3.35-5-alpine'
-            args: ['\$(JENKINS_SECRET)', '\$(JENKINS_NAME)']
-            resources:
-              requests:
-                memory: "1024Mi"
-                cpu: "500m"
-              limits:
-                cpu: "2000m"
-                memory: "2048Mi"
-       """
+      """
     }
   }
     stages{

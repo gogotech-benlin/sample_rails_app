@@ -26,6 +26,9 @@ pipeline{
               requests:
                 memory: "1024Mi"
                 cpu: "500m"
+              limits:
+                cpu: "2000m"
+                memory: "2048Mi"
        """
     }
   }

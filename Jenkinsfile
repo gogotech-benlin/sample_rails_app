@@ -37,6 +37,7 @@ pipeline{
                     container("ruby"){
                     sh 'bundle exec rspec spec'
 
+
                     }
                 }
                 

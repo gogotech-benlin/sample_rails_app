@@ -20,7 +20,7 @@ pipeline{
             - cat
             tty: true
           - name: jnlp
-            image: 'jenkins/jnlp-slave:3.35-5-alpine'
+            image: 'jenkins/inbound-agent:latest'
             args: ['\$(JENKINS_SECRET)', '\$(JENKINS_NAME)']
             resources:
               requests:

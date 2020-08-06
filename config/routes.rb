@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'test/method1'
+  get 'test/method2'
   get 'password_resets/new'
   get 'password_resets/edit'
   root   'static_pages#home'

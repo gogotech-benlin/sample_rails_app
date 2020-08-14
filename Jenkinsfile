@@ -48,8 +48,6 @@ pipeline{
 
             }
             stage("sonarqube"){
-
-
                 steps{
                     container("java"){
                           script {
@@ -59,7 +57,9 @@ pipeline{
                               sh "${scannerHome}/bin/sonar-scanner " +
                                  "-Dsonar.pullrequest.branch=${env.BRANCH_NAME} " +
                                  "-Dsonar.pullrequest.key=${env.CHANGE_ID} "  +
-                                 "-Dsonar.pullrequest.provider=github "
+                                 "-Dsonar.pullrequest.provider=github " +
+                                 "-Dsonar.projectKey=gogotech-benlin_sample_rails_app " +
+                                 "-Dsonar.organization=gogotech-benlin"
                           }
                     }
                 }

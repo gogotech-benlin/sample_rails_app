@@ -48,7 +48,7 @@ pipeline{
 
             }
             stage("sonarqube"){
-                when { changeRequest }
+                when { changeRequest() }
                 steps{
                     container("java"){
                           script {
